@@ -11,7 +11,7 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
-      await axios.post("https://ai-notes-backend-ynth.onrender.com/register", { email, password });
+     await axios.post("https://ai-notes-backend-ynth.onrender.com/register", { email, password });
       setMsg("Registered! Please login.");
       setIsError(false);
     } catch (err) {

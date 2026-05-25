@@ -17,7 +17,7 @@ export default function Summarize() {
     setLoading(true); setError(""); setSummary("");
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.post("https://ai-notes-backend-ynth.onrender.com",
+      const res = await axios.post("https://ai-notes-backend-ynth.onrender.com/summarize",
         { notes },
         { headers: { Authorization: `Bearer ${token}` } }
       );

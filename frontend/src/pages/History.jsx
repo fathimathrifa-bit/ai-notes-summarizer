@@ -11,7 +11,7 @@ export default function History() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    axios.get("https://ai-notes-backend-ynth.onrender.com",
+    axios.get("https://ai-notes-backend-ynth.onrender.com/history",
       { headers: { Authorization: `Bearer ${token}` } })
       .then(res => setHistory(res.data))
       .catch(() => {});
