@@ -11,7 +11,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/login", { email, password });
+      const res = await axios.post("https://ai-notes-backend-ynth.onrender.com", { email, password });
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch {
